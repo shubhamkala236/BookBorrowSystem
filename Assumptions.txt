@@ -1,0 +1,13 @@
+-------------Assumptions for Book Borrow Application-------------
+
+1. All Books are unique in database.
+2. Only logged in user can borrow a book.
+3. Only logged in user can create a book/ lent a book.
+4. Whenever any user borrow other user's book his/her token would be deducted by 1 and lenders token would increase by 1.
+5. Atleast one token is required to borrow a book.
+
+6. Logged in users borrowed books would be displayed in borrowedbooks section.
+7. List of lended books can be viewed in Lentbooks section.
+
+8. Users can return the books from borrowed book section.
+9. When returning a book no transaction of token is done simply just book is made available to others.

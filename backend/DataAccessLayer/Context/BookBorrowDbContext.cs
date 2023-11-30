@@ -21,10 +21,11 @@ namespace DataAccessLayer.Context
         {
             base.OnModelCreating(modelBuilder);
 
+            //User and lentBookList configuration
             modelBuilder.Entity<Book>()
                 .HasOne(b => b.LentByUser)
                 .WithMany(u => u.LentBooksList)
-                .HasForeignKey(b => b.BorrowedByUserId).OnDelete(DeleteBehavior.Restrict);
+                .HasForeignKey(b => b.LentByUserId).OnDelete(DeleteBehavior.Restrict);
 
             modelBuilder.Entity<Book>()
                 .HasOne(b => b.BorrowedByUser)
